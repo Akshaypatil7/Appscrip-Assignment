@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block content%}
+<div class='jumbotron'>
+    <h1>Summary</h1>
+	<p>Here's your game summary:</p>
+	<body>
+	<p>Hello {{username}} in Appscrip Assignment Game!!</p>
+	<p>Here are the answers you have selected:</p>
+	Who is the best cricketer in the world?<br>
+	<p>Answer:{{best_cricketer}}</p>
+	What are the colors in the national flag?<br>
+	Answers : 
+		<ul>
+			{% for color in national_flag %}
+			<li>{{color}}</li>
+			{% endfor %}
+		</ul>
+	</body>
+	<a href="{{url_for('index')}}" class="next">Save & Finish &raquo;</a>
+	<a href="{{url_for('history')}}" class="next">History &raquo;</a>
+	
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block content%}
+    <h1>History</h1>
+	<p>All played games history:</p>
+		{% for i in data %}
+		GAME 1 = {{ i["Date_Time"] }}<br>
+        Username = {{ i["username"] }} <br>
+        Who is the best cricketer in the world?<br>
+		Answer = {{ i["best_cricketer"] }} <br>
+        What are the colors in the national flag?<br>
+        <p>Answer = {{ i["national_flag"] }}</p>
+		
+		{% endfor %}
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html"%}
+{% block content%}
+    <h1>Who is the best cricketer in the world?</h1>
+    <form  action="{{url_for('national_flag')}}">
+		<div class="container">
+	<div class="row">
+	    <br/>
+        <div class="panel panel-primary">
+             <div class="panel-heading">                  
+                  <pre>
+Who is the best cricketer in the world? Select Only One:
+Options:
+                     
+                  </pre>
+             </div><!--.panel-heading-->
+        
+<div class = "panel-body">
+      <h4>Your Answer</h4>
+           </div>
+<ul class = "list-group">
+    <li class = "list-group-item">
+          <div class="checkbox">
+			<label>
+            <input type="checkbox" name="S" value="Sachin Tendulkar">A) Sachin Tendulkar
+            </label>
+        </div>
+    </li>
+    <li class = "list-group-item">
+          <div class="checkbox">
+			<label>
+			<input type="checkbox" name="V" value="Virat Kohli"> B) Virat Kohli
+			</label>
+        </div>
+    </li>
+    <li class = "list-group-item">
+          <div class="checkbox">
+			<label>
+            <input type="checkbox" name="A" value="Adam Gilchirst">C) Adam Gilchirst
+            </label>
+        </div>
+    </li>
+    <li class = "list-group-item">
+          <div class="checkbox">
+			<label>
+            <input type="checkbox" name="J" value="Jacques Kallis">D) Jacques Kallis
+            </label>
+        </div>
+    </li>
+   </ul>
+		<input type="submit" value="Submit">
+    </form>
+<a href="{{url_for('national_flag')}}" class="next">Next &raquo;</a>
+{% endblock %}

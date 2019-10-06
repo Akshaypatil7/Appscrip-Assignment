@@ -1,0 +1,53 @@
+{% extends "base.html"%}
+{% block content%}
+    <h1>What are the colors in the national flag?</h1>
+    <form action="{{url_for('summary')}}">
+		<div class="container">
+	<div class="row">
+	    <br/>
+        <div class="panel panel-primary">
+             <div class="panel-heading">                  
+                  <pre>
+What are the colors in the Indian national flag? Select all:
+Options:
+                     
+                  </pre>
+             </div><!--.panel-heading-->
+        
+<div class = "panel-body">
+      <h4>Your Answer</h4>
+           </div>
+<ul class = "list-group">
+    <li class = "list-group-item">
+          <div class="checkbox">
+			<label>
+            <input type="checkbox" name="check" value="White">A) White
+            </label>
+        </div>
+    </li>
+    <li class = "list-group-item">
+          <div class="checkbox">
+            <label>
+            <input type="checkbox" name="check" value="Yellow">B) Yellow
+            </label>
+        </div>
+    </li>
+    <li class = "list-group-item">
+          <div class="checkbox">
+            <label>
+            <input type="checkbox" name="check" value="Orange">C) Orange
+            </label>
+        </div>
+    </li>
+    <li class = "list-group-item">
+          <div class="checkbox">
+            <label>
+            <input type="checkbox" name="check" value="Green">D) Green
+            </label>
+        </div>
+    </li>
+   </ul>
+		<input type="submit" value="Submit">
+    </form>
+	<a href="{{url_for('summary')}}" class="next">Next &raquo;</a>
+{% endblock %}

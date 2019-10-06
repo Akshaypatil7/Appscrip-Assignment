@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="jumbotron">
+<h1>What is your name?</h1>
+
+<form action="{{url_for('best_cricketer')}}">
+   <label for="username">UserName</label>
+    <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
+<a href="{{url_for('best_cricketer')}}" class="next">Next &raquo;</a>
+
+</div>
+{% endblock %}
